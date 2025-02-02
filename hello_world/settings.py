@@ -35,6 +35,8 @@ if 'CODESPACE_NAME' in os.environ:
     CSRF_TRUSTED_ORIGINS = [f'https://{codespace_name}-8000.{codespace_domain}']
 
 # Application definition
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+WSGI_APPLICATION = 'api.wsgi.app'
 
 INSTALLED_APPS = [
     "django.contrib.admin",
